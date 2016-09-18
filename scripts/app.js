@@ -37,14 +37,23 @@ function BooksIndexController($http) {
 		});
 	}
 
-	vm.deleteAlbum = function (album) {
+	vm.updateBook = function(book) {
+		$http({
+			method: 'PUT',
+			url: 'https://super-crud.herokuapp.com/books' + book._id,
+		}).then(function successUpdateCallback(response) {
+			
+		})
+	}
+
+	vm.deleteBook = function(book) {
 		$http({
 			method: 'DELETE',
-			url: '/api/books/'+ book._id
-		}).then(function successCallback(json) {
+			url: 'https://super-crud.herokuapp.com/books' + book._id,
+		}).then(function successDeleteCallback(json) {
 			var index = vm.books.indexOf(book);
 			vm.books.splice(index, 1);
-			console.log(index);
+			console.log('book delete response data:', response.data);
 			}, function errorCallback(response) {
 			console.log('There was an error deleting the data', response);
 		});
