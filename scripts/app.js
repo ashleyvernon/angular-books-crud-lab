@@ -9,12 +9,12 @@ BooksIndexController.$inject = ['$http'];
 //passes http into controller function
 function BooksIndexController($http) {
 	var vm = this;
-	vm.newBook = {};
+	// vm.newBook = {};
 	$http({
 		method: 'GET',
 		url: 'https://super-crud.herokuapp.com/books'
 	}).then(function successCallback(response) {
-		vm.books = response.data;
+		vm.books = response.data.books;
 	}, function errorCallback(reponse) {
 		console.log('There was an error getting the data', response);
 	});
@@ -36,6 +36,19 @@ function BooksIndexController($http) {
 			console.log('There was an error posting the data', response);
 		});
 	}
+
+	vm.deleteAlbum = function (album) {
+		$http({
+			method: 'DELETE',
+			url: '/api/books/'+ book._id
+		}).then(function successCallback(json) {
+			var index = vm.books.indexOf(book);
+			vm.books.splice(index, 1);
+			console.log(index);
+			}, function errorCallback(response) {
+			console.log('There was an error deleting the data', response);
+		});
+	}	
 	// vm.newBook = {
 	// 	title: '',
 	// 	author: '',
