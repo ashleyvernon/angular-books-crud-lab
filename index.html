@@ -16,21 +16,23 @@
     <!-- VENDOR SCRIPTS -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="controllers/BooksIndexController.js"></script>
-    <script src="controllers/BooksShowController.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="controllers/BooksIndexController.js"></script>
+    <script type="text/javascript" src="controllers/BooksShowController.js"></script>
 
 
 </head>
 <body>
     <div class="jumbotron">
         <div class="container">
-            <h1>Welcome to angular books app</h1>
-            <p>Your virtual library!</p>
-            <div ng-view></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Welcome to angular books app</h1>
+                    <p>Your virtual library!</p>
+                    <div ng-view></div>
+                </div>
+            </div>
         </div>
-    </div>
-
     </div>
 </body>
 </html>
