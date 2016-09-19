@@ -1,5 +1,5 @@
 <h3>Books</h3>
-<div ng-repeat="book in BooksIndexCtrl.books">
+<div ng-repeat="book in booksIndexCtrl.books">
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -8,9 +8,9 @@
 
             {{book._id}}
 
-            		<a ng-href="/books/{{book._id}}">{{book.title}}</a>
-            		<p> {{book.author}}</p>
-            		<p> {{book.releaseDate}}
+    		<a ng-href="/books/{{book._id}}">{{book.title}}</a>
+    		<p> {{book.author}}</p>
+    		<p> {{book.releaseDate}}
 
             </div>
         </div>
