@@ -1,0 +1,52 @@
+<h3>Books</h3>
+<div ng-repeat="book in booksIndexCtrl.books"><!-- {{book}} -->
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+
+<!--                 <form class="form-horizantal" ng-submit="booksIndexCtrl.createBook()" type="submit">
+                    <fieldset> -->
+<!-- 
+                        <legend>Add New Book</legend> -->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Book</label>
+                            <div class="col-md-4">
+                            <input id="title" type="text" class="form-control" placeholder="New book title" ng-model="booksIndexCtrl.newBook.title" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Author</label>
+                            <div class="col-md-4">
+                            <input id="author" type="text" class="form-control" placeholder="New book author" ng-model="booksIndexCtrl.newBook.author">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Image</label>
+                            <div class="col-md-4">
+                            <input id="image" type="text" class="form-control" placeholder="New book image" ng-model="booksIndexCtrl.newBook.image">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Release Date</label>
+                            <div class="col-md-4">
+                            <input id="releaseDate" type="text" class="form-control" placeholder="New book releasedate" ng-model="booksIndexCtrl.newBook.releaseDate">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Save Book</label>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+
+<!--                     </fieldset>
+                </form> -->
+            </div>
+        </div>
+
+
