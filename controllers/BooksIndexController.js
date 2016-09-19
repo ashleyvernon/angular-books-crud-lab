@@ -4,7 +4,7 @@ angular
 	.module('book')
 	.controller('BooksIndexController', BooksIndexController);
 
-BooksIndexController.$inject = ['$http'];
+BooksIndexController.$inject =['$http'];
 
 function BooksIndexController($http){
     var vm = this;
